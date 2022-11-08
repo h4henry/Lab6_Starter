@@ -104,7 +104,7 @@ function initFormHandler() {
   saveRecipesToStorage(recipe);
   }
   // B10. TODO - Get a reference to the "Clear Local Storage" button
-  const clearbutton = document.querySelector('button[type=button');
+  let clearbutton = document.querySelector('button[type=button]');
   // B11. TODO - Add a click event listener to clear local storage button
   
   // Steps B12 & B13 will occur inside the event listener from step B11
@@ -113,7 +113,7 @@ function initFormHandler() {
 
 
 
-  clearStorageBtn.addEventListener('click', ()=> {
+  clearbutton.addEventListener('click', ()=> {
     localStorage.clear();
     let main = document.getElementsByTagName('main')[0];
     while (main.firstChild) {
